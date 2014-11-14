@@ -84,6 +84,13 @@ typedef void(^MZFormSheetTransitionCompletionHandler)();
 @property (nonatomic, assign, getter = isTransparentTouchEnabled) BOOL transparentTouchEnabled MZ_APPEARANCE_SELECTOR;
 @end
 
+@interface MZFormSheetBackgroundWindow (Show)
+
++ (void)showBackgroundWindowAnimated:(BOOL)animated;
++ (void)hideBackgroundWindowAnimated:(BOOL)animated completion:(void (^)())completion;
+
+@end
+
 @interface MZFormSheetController : UIViewController <MZAppearance>
 /**
  *  Register custom transition animation style.
